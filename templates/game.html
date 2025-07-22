@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Craps Game</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Craps Dice Game</h1>
+    <div class="result-container">
+        <p>Player rolled: <strong>{{ dice[0] }}</strong> + <strong>{{ dice[1] }}</strong> = <strong>{{ sum_of_dice }}</strong></p>
+
+        {% if game_status == "WON" %}
+            <h2 class="win">🎉 Congratulations! You won! 🎉</h2>
+            <a href="/start"><button>Play Again</button></a>
+        {% elif game_status == "LOSE" %}
+            <h2 class="lose">😞 Sorry, you lost! 😞</h2>
+            <a href="/start"><button>Play Again</button></a>
+        {% else %}
+            <p>Point to match: <strong>{{ my_point }}</strong></p>
+            <a href="/roll"><button>Roll Again</button></a>
+        {% endif %}
+    </div>
+</body>
+</html>
