@@ -18,7 +18,7 @@ Welcome to the Craps Dice Game! This is a simple web application built using Fla
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/craps-dice-game.git
+   git clone https://github.com/surbhi-sharma-30/craps-dice-game.git
    cd craps-dice-game
 2. Create a virtual environment (optional but recommended):
 python -m venv venv
